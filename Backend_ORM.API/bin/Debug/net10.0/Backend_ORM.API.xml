@@ -154,6 +154,281 @@
             <param name="request">Control link details</param>
             <returns>Created link information</returns>
         </member>
+        <member name="T:Backend_ORM.API.Controllers.ProcessController">
+            <summary>
+            Controller for Process operations
+            Handles HTTP requests for the 4-level process hierarchy - Level 2
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessController.GetProcesses(System.Nullable{System.Int32},System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Get all processes with optional filter by process type
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessController.GetProcessById(System.Int32)">
+            <summary>
+            Get a specific process by ID
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessController.CreateProcess(Backend_ORM.Core.DTOs.Process.CreateProcessLevelTwoDto)">
+            <summary>
+            Create a new process
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessController.UpdateProcess(System.Int32,Backend_ORM.Core.DTOs.Process.UpdateProcessLevelTwoDto)">
+            <summary>
+            Update an existing process
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessController.DeleteProcess(System.Int32)">
+            <summary>
+            Delete a process
+            </summary>
+        </member>
+        <member name="T:Backend_ORM.API.Controllers.ProcessDetailController">
+            <summary>
+            Controller for ProcessDetail operations
+            Handles HTTP requests for the 4-level process hierarchy - Level 4
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessDetailController.GetProcessDetails(System.Nullable{System.Int32},System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Get all process details with optional filter by sub-process
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessDetailController.GetProcessDetailById(System.Int32)">
+            <summary>
+            Get a specific process detail by ID
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessDetailController.CreateProcessDetail(Backend_ORM.Core.DTOs.Process.CreateProcessDetailDto)">
+            <summary>
+            Create a new process detail
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessDetailController.UpdateProcessDetail(System.Int32,Backend_ORM.Core.DTOs.Process.UpdateProcessDetailDto)">
+            <summary>
+            Update an existing process detail
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessDetailController.DeleteProcessDetail(System.Int32)">
+            <summary>
+            Delete a process detail
+            </summary>
+        </member>
+        <member name="T:Backend_ORM.API.Controllers.ProcessTypeController">
+            <summary>
+            Controller for ProcessType operations
+            Handles HTTP requests for the 4-level process hierarchy - Level 1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessTypeController.GetProcessTypes(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Get all process types with pagination and sorting
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessTypeController.GetProcessTypeById(System.Int32)">
+            <summary>
+            Get a specific process type by ID
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessTypeController.CreateProcessType(Backend_ORM.Core.DTOs.Process.CreateProcessTypeDto)">
+            <summary>
+            Create a new process type
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessTypeController.UpdateProcessType(System.Int32,Backend_ORM.Core.DTOs.Process.UpdateProcessTypeDto)">
+            <summary>
+            Update an existing process type
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.ProcessTypeController.DeleteProcessType(System.Int32)">
+            <summary>
+            Delete a process type
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaControlController.GetProcessRiskControls(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Get all control assessments for a specific process risk
+            GET /api/rba/controls/processes/{processId}/risks/{riskId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaControlController.GetControlAssessmentById(System.Int32,System.Int32)">
+            <summary>
+            Get specific control assessment by ID
+            GET /api/rba/controls/{assessmentId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaControlController.CreateControlAssessment(Backend_ORM.Core.DTOs.RBA.ControlAssessmentCreateDto)">
+            <summary>
+            Create new control assessment
+            POST /api/rba/controls/assessments
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaControlController.UpdateControlAssessment(System.Int32,System.Int32,Backend_ORM.Core.DTOs.RBA.ControlAssessmentUpdateDto)">
+            <summary>
+            Update control assessment
+            PUT /api/rba/controls/{assessmentId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaControlController.DeleteControlAssessment(System.Int32,System.Int32)">
+            <summary>
+            Delete control assessment
+            DELETE /api/rba/controls/{assessmentId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.GetProcesses(System.Int32)">
+            <summary>
+            Get all processes with maximum risk summary
+            GET /api/rba/processes?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.GetProcessRisks(System.Int32,System.Int32)">
+            <summary>
+            Get all risks linked to a specific process
+            GET /api/rba/processes/{processId}/risks?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.GetProcessRiskById(System.Int32,System.Int32)">
+            <summary>
+            Get specific process risk assessment by ID
+            GET /api/rba/processes/risks/{assessmentId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.CreateProcessRiskAssessment(Backend_ORM.Core.DTOs.RBA.ProcessRiskAssessmentCreateDto)">
+            <summary>
+            Create new process risk assessment
+            POST /api/rba/processes/risks/assessments
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.UpdateProcessRiskAssessment(System.Int32,System.Int32,Backend_ORM.Core.DTOs.RBA.ProcessRiskAssessmentUpdateDto)">
+            <summary>
+            Update process risk assessment
+            PUT /api/rba/processes/risks/{assessmentId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.UpdateGrossLoss(System.Int32,Backend_ORM.API.Controllers.GrossLossUpdateRequest)">
+            <summary>
+            Update gross loss expectation only (partial update)
+            PATCH /api/rba/processes/risks/{assessmentId}/gross-loss
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaProcessRiskController.DeleteProcessRiskAssessment(System.Int32,System.Int32)">
+            <summary>
+            Delete process risk assessment
+            DELETE /api/rba/processes/risks/{assessmentId}?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaReferenceDataController.GetImpactLevels(System.Int32)">
+            <summary>
+            Get all risk impact levels (non-financial)
+            GET /api/rba/reference/impact-levels?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaReferenceDataController.GetImpactLevelsFinancial(System.Int32)">
+            <summary>
+            Get impact levels with financial thresholds
+            GET /api/rba/reference/impact-levels/financial?accountId=1
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Backend_ORM.API.Controllers.RbaReferenceDataController.GetImpactByAmount(System.Int32,System.Decimal)" -->
+        <member name="M:Backend_ORM.API.Controllers.RbaReferenceDataController.GetOccurrenceLevels(System.Int32)">
+            <summary>
+            Get all risk occurrence levels (without multipliers)
+            GET /api/rba/reference/occurrence-levels?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaReferenceDataController.GetOccurrenceLevelsMultipliers(System.Int32)">
+            <summary>
+            Get occurrence levels with gross loss multipliers
+            GET /api/rba/reference/occurrence-levels/multipliers?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaReferenceDataController.CalculateInherentScore(Backend_ORM.API.Controllers.InherentScoreRequest)">
+            <summary>
+            Calculate inherent risk score and get rating (Very High, High, Medium, Low)
+            POST /api/rba/reference/inherent-score
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaReferenceDataController.GetControlEffectivenessLevels(System.Int32)">
+            <summary>
+            Get control effectiveness levels for residual risk calculation
+            GET /api/rba/reference/control-effectiveness-levels?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.GetCategories(System.Int32)">
+            <summary>
+            Get all risk categories for an account
+            GET /api/rba/risks/categories?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.GetRisksByCategory(System.Int32,System.Int32)">
+            <summary>
+            Get risk elements for a specific category
+            GET /api/rba/risks/categories/{categoryId}/risks?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.GetRiskAssessment(System.Int32,System.Int32)">
+            <summary>
+            Get risk assessment for a specific risk element
+            GET /api/rba/risks/{riskElementId}/assessment?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.GetRiskAssessmentsByCategory(System.Int32,System.Int32)">
+            <summary>
+            Get all risk assessments for a risk category
+            GET /api/rba/risks/categories/{riskCategoryId}/assessments?accountId=1
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.CreateRiskAssessment(Backend_ORM.Core.DTOs.RBA.RiskAssessmentCreateDto)">
+            <summary>
+            Create new risk assessment
+            POST /api/rba/risks/assessments
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.UpdateRiskAssessment(System.Int32,System.Int32,Backend_ORM.Core.DTOs.RBA.RiskAssessmentUpdateDto)">
+            <summary>
+            Update risk assessment
+            PUT /api/rba/risks/{riskElementId}/assessment
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.RbaRiskController.DeleteRiskAssessment(System.Int32,System.Int32)">
+            <summary>
+            Delete risk assessment
+            DELETE /api/rba/risks/{riskElementId}/assessment?accountId=1
+            </summary>
+        </member>
+        <member name="T:Backend_ORM.API.Controllers.SubProcessController">
+            <summary>
+            Controller for SubProcess operations
+            Handles HTTP requests for the 4-level process hierarchy - Level 3
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.SubProcessController.GetSubProcesses(System.Nullable{System.Int32},System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Get all sub-processes with optional filter by process
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.SubProcessController.GetSubProcessById(System.Int32)">
+            <summary>
+            Get a specific sub-process by ID
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.SubProcessController.CreateSubProcess(Backend_ORM.Core.DTOs.Process.CreateSubProcessDto)">
+            <summary>
+            Create a new sub-process
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.SubProcessController.UpdateSubProcess(System.Int32,Backend_ORM.Core.DTOs.Process.UpdateSubProcessDto)">
+            <summary>
+            Update an existing sub-process
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.SubProcessController.DeleteSubProcess(System.Int32)">
+            <summary>
+            Delete a sub-process
+            </summary>
+        </member>
         <member name="T:Program">
             <summary>
             Auto-generated public partial Program class for top-level statement apps.

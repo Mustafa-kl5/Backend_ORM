@@ -163,3 +163,4 @@ C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.API\obj\Debug\net10
 C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.API\obj\Debug\net10.0\ref\Backend_ORM.API.dll
 C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.API\bin\Debug\net10.0\Backend_ORM.API.xml
 C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.API\obj\Debug\net10.0\Backend_ORM.API.xml
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.API\obj\Debug\net10.0\Backend_ORM.API.sourcelink.json

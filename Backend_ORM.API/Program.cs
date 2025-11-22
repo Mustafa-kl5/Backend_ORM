@@ -1,8 +1,12 @@
 using Backend_ORM.Core.Interfaces.Repositories;
+using Backend_ORM.Core.Interfaces.Repositories.RBA;
 using Backend_ORM.Core.Interfaces.Services;
+using Backend_ORM.Core.Interfaces.Services.RBA;
 using Backend_ORM.Infrastructure.Context;
 using Backend_ORM.Infrastructure.Repositories;
+using Backend_ORM.Infrastructure.Repositories.RBA;
 using Backend_ORM.Services.Services;
+using Backend_ORM.Services.Services.RBA;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
@@ -36,9 +40,29 @@ builder.Services.AddDbContext<ORMContext>(options =>
 
 // Register Repositories
 builder.Services.AddScoped<ILinkProcessRepository, LinkProcessRepository>();
+builder.Services.AddScoped<IProcessTypeRepository, ProcessTypeRepository>();
+builder.Services.AddScoped<IProcessRepository, ProcessRepository>();
+builder.Services.AddScoped<ISubProcessRepository, SubProcessRepository>();
+builder.Services.AddScoped<IProcessDetailRepository, ProcessDetailRepository>();
+
+// Register RBA Repositories
+builder.Services.AddScoped<IRbaRiskRepository, RbaRiskRepository>();
+builder.Services.AddScoped<IRbaProcessRiskRepository, RbaProcessRiskRepository>();
+builder.Services.AddScoped<IRbaControlRepository, RbaControlRepository>();
+builder.Services.AddScoped<IRbaReferenceDataRepository, RbaReferenceDataRepository>();
 
 // Register Services
 builder.Services.AddScoped<ILinkProcessService, LinkProcessService>();
+builder.Services.AddScoped<IProcessTypeService, ProcessTypeService>();
+builder.Services.AddScoped<IProcessService, ProcessService>();
+builder.Services.AddScoped<ISubProcessService, SubProcessService>();
+builder.Services.AddScoped<IProcessDetailService, ProcessDetailService>();
+
+// Register RBA Services
+builder.Services.AddScoped<IRbaRiskService, RbaRiskService>();
+builder.Services.AddScoped<IRbaProcessRiskService, RbaProcessRiskService>();
+builder.Services.AddScoped<IRbaControlService, RbaControlService>();
+builder.Services.AddScoped<IRbaReferenceDataService, RbaReferenceDataService>();
 
 // Add CORS
 builder.Services.AddCors(options =>
