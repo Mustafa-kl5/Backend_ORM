@@ -15,3 +15,4 @@ C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Services\obj\Debug\
 C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Services\obj\Debug\net10.0\refint\Backend_ORM.Services.dll
 C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Services\obj\Debug\net10.0\Backend_ORM.Services.pdb
 C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Services\obj\Debug\net10.0\ref\Backend_ORM.Services.dll
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Services\obj\Debug\net10.0\Backend_ORM.Services.sourcelink.json
