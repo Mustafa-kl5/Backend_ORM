@@ -1,0 +1,11 @@
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\bin\Debug\net10.0\Backend_ORM.Core.deps.json
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\bin\Debug\net10.0\Backend_ORM.Core.dll
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\bin\Debug\net10.0\Backend_ORM.Core.pdb
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\Backend_ORM.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\Backend_ORM.Core.AssemblyInfoInputs.cache
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\Backend_ORM.Core.AssemblyInfo.cs
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\Backend_ORM.Core.csproj.CoreCompileInputs.cache
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\Backend_ORM.Core.dll
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\refint\Backend_ORM.Core.dll
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\Backend_ORM.Core.pdb
+C:\Users\MUSTAFA\Desktop\ORM\Backend\Backend_ORM\Backend_ORM.Core\obj\Debug\net10.0\ref\Backend_ORM.Core.dll

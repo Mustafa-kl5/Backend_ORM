@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Backend_ORM.API</name>
+    </assembly>
+    <members>
+        <member name="T:Backend_ORM.API.Controllers.LinkProcessController">
+            <summary>
+            API Controller for LinkProcess operations
+            Provides RESTful endpoints for managing process links to business units, risks, and controls
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetProcesses(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Endpoint 1: GET /api/linkprocess/processes
+            Retrieve list of all processes with links summary
+            </summary>
+            <param name="categoryId">Filter by process category (optional)</param>
+            <param name="processId">Filter by process (optional)</param>
+            <param name="subProcessId">Filter by sub-process (optional)</param>
+            <param name="processDetailsId">Filter by process details (optional)</param>
+            <param name="pageNumber">Page number (default: 1)</param>
+            <param name="pageSize">Page size (default: 50)</param>
+            <param name="sortBy">Sort column (default: Category)</param>
+            <param name="sortDir">Sort direction: ASC or DESC (default: ASC)</param>
+            <returns>Paginated list of processes with link counts</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetProcessDetail(System.Int32)">
+            <summary>
+            Endpoint 2: GET /api/linkprocess/processes/{processDetailsId}
+            Retrieve detailed process with all links (for edit mode)
+            </summary>
+            <param name="processDetailsId">Unique process detail identifier</param>
+            <returns>Detailed process information with all business units, risks, and controls</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetBusinessUnits(System.Int32)">
+            <summary>
+            Endpoint 7: GET /api/linkprocess/processes/{processDetailsId}/business-units
+            Get all business units linked to a process
+            </summary>
+            <param name="processDetailsId">Process identifier</param>
+            <returns>List of business unit links</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetRisks(System.Int32)">
+            <summary>
+            Endpoint 8: GET /api/linkprocess/processes/{processDetailsId}/risks
+            Get all risks linked to a process (includes controls)
+            </summary>
+            <param name="processDetailsId">Process identifier</param>
+            <returns>List of risk links with their controls</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.DeleteBusinessLine(System.Int32,System.Int32)">
+            <summary>
+            Endpoint 3: DELETE /api/linkprocess/processes/{processDetailsId}/business-lines/{linkId}
+            Delete a business unit link from a process
+            </summary>
+            <param name="processDetailsId">Process identifier</param>
+            <param name="linkId">Business line link identifier</param>
+            <returns>Delete response with remaining links count</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.DeleteRisk(System.Int32,System.Int32)">
+            <summary>
+            Endpoint 4: DELETE /api/linkprocess/processes/{processDetailsId}/risks/{riskLinkId}
+            Delete a risk link (cascades to controls)
+            </summary>
+            <param name="processDetailsId">Process identifier</param>
+            <param name="riskLinkId">Risk link identifier</param>
+            <returns>Delete response with total deleted count (risk + cascaded controls)</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.DeleteControl(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Endpoint 5: DELETE /api/linkprocess/processes/{processDetailsId}/risks/{riskLinkId}/controls/{controlLinkId}
+            Delete a control link from a risk
+            </summary>
+            <param name="processDetailsId">Process identifier (not used in service but validates route)</param>
+            <param name="riskLinkId">Risk link identifier</param>
+            <param name="controlLinkId">Control link identifier</param>
+            <returns>Delete response with remaining controls count</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.BatchDelete(Backend_ORM.Core.DTOs.LinkProcess.BatchDeleteRequestDto)">
+            <summary>
+            Endpoint 6: POST /api/linkprocess/batch-delete
+            Delete multiple links across all categories in one operation
+            </summary>
+            <param name="request">Batch delete request containing all link IDs to delete</param>
+            <returns>Batch delete response with success/failure counts</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetDepartments">
+            <summary>
+            Endpoint 10: GET /api/linkprocess/lookups/departments
+            Get all departments for business unit linking
+            </summary>
+            <returns>List of departments</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetBranches">
+            <summary>
+            Endpoint 11: GET /api/linkprocess/lookups/branches
+            Get all branches for business unit linking
+            </summary>
+            <returns>List of branches</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetDivisions">
+            <summary>
+            Endpoint 12: GET /api/linkprocess/lookups/divisions
+            Get all divisions for business unit linking
+            </summary>
+            <returns>List of divisions</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetUsers">
+            <summary>
+            Endpoint 13: GET /api/linkprocess/lookups/users
+            Get all users for business unit linking
+            </summary>
+            <returns>List of users</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.AddBusinessUnit(System.Int32,Backend_ORM.Core.DTOs.LinkProcess.AddBusinessLineDto)">
+            <summary>
+            Endpoint 14: POST /api/linkprocess/processes/{id}/business-units
+            Add a new business unit link to a process
+            </summary>
+            <param name="id">Process details ID</param>
+            <param name="request">Business unit link details</param>
+            <returns>Created link information</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetRisks">
+            <summary>
+            Endpoint 15: GET /api/linkprocess/lookups/risks
+            Get all risks for lookup dropdown
+            </summary>
+            <returns>List of all risks with categories</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.AddRisk(System.Int32,Backend_ORM.Core.DTOs.LinkProcess.AddRiskLinkDto)">
+            <summary>
+            Endpoint 16: POST /api/linkprocess/processes/{id}/risks
+            Add a new risk link to a process
+            </summary>
+            <param name="id">Process details ID</param>
+            <param name="request">Risk link details</param>
+            <returns>Created link information</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.GetControls">
+            <summary>
+            Endpoint 17: GET /api/linkprocess/lookups/controls
+            Get all controls for lookup dropdown
+            </summary>
+            <returns>List of all controls with categories</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.LinkProcessController.AddControl(System.Int32,Backend_ORM.Core.DTOs.LinkProcess.AddControlLinkDto)">
+            <summary>
+            Endpoint 18: POST /api/linkprocess/risks/{riskLinkId}/controls
+            Add a new control link to a risk
+            </summary>
+            <param name="riskLinkId">Risk link ID (OrmProcessRiskLink.Id)</param>
+            <param name="request">Control link details</param>
+            <returns>Created link information</returns>
+        </member>
+        <member name="T:Program">
+            <summary>
+            Auto-generated public partial Program class for top-level statement apps.
+            </summary>
+        </member>
+    </members>
+</doc>

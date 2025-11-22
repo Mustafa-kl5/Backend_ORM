@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Backend_ORM.Infrastructure.Entities;
+
+public partial class BcmBiaCriticality
+{
+    public int Id { get; set; }
+
+    public int AccountId { get; set; }
+
+    public int Code { get; set; }
+
+    public string Description { get; set; } = null!;
+
+    public int CreatedBy { get; set; }
+
+    public DateTime CreationDate { get; set; }
+
+    public int? LastUpdatedBy { get; set; }
+
+    public DateTime? LastUpdateDate { get; set; }
+
+    public virtual GrcAccount Account { get; set; } = null!;
+
+    public virtual ICollection<BcmBiaFuntion> BcmBiaFuntions { get; set; } = new List<BcmBiaFuntion>();
+
+    public virtual ICollection<BcmBiaImpactAnalysis> BcmBiaImpactAnalyses { get; set; } = new List<BcmBiaImpactAnalysis>();
+
+    public virtual ICollection<BcmBiaPlanImpactAnalysisDetailsTest> BcmBiaPlanImpactAnalysisDetailsTestCriticalityIdAnswerNavigations { get; set; } = new List<BcmBiaPlanImpactAnalysisDetailsTest>();
+
+    public virtual ICollection<BcmBiaPlanImpactAnalysisDetailsTest> BcmBiaPlanImpactAnalysisDetailsTestCriticalityIdTestResultNavigations { get; set; } = new List<BcmBiaPlanImpactAnalysisDetailsTest>();
+}

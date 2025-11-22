@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Backend_ORM.Core\Backend_ORM.Core.csproj" />
+    <ProjectReference Include="..\Backend_ORM.Infrastructure\Backend_ORM.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
