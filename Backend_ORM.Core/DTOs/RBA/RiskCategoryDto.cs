@@ -1,4 +1,4 @@
-npmnamespace Backend_ORM.Core.DTOs.RBA;
+namespace Backend_ORM.Core.DTOs.RBA;
 
 public class RiskCategoryDto
 {

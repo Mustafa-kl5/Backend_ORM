@@ -4,6 +4,30 @@
         <name>Backend_ORM.API</name>
     </assembly>
     <members>
+        <member name="T:Backend_ORM.API.Controllers.AuthController">
+            <summary>
+            Controller for authentication operations
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.AuthController.Login(Backend_ORM.Core.DTOs.Auth.LoginRequestDto)">
+            <summary>
+            Authenticate user with username and password
+            </summary>
+            <param name="request">Login credentials</param>
+            <returns>JWT token and user information</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.AuthController.GetCurrentUser">
+            <summary>
+            Get current authenticated user information
+            </summary>
+            <returns>Current user details</returns>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.AuthController.ValidateToken">
+            <summary>
+            Validate a JWT token
+            </summary>
+            <returns>Validation result with user information</returns>
+        </member>
         <member name="T:Backend_ORM.API.Controllers.LinkProcessController">
             <summary>
             API Controller for LinkProcess operations
@@ -153,6 +177,34 @@
             <param name="riskLinkId">Risk link ID (OrmProcessRiskLink.Id)</param>
             <param name="request">Control link details</param>
             <returns>Created link information</returns>
+        </member>
+        <member name="T:Backend_ORM.API.Controllers.MigrationController">
+            <summary>
+            Controller for running data migrations (Admin only)
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.MigrationController.ResetAllPasswords">
+            <summary>
+            Reset all user passwords to default (M123456789) with BCrypt hashing
+            WARNING: This will reset ALL user passwords!
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.MigrationController.EncryptAllUserData">
+            <summary>
+            Encrypt all user sensitive data (Name, UserLogin, EmailAddress)
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.MigrationController.RunFullMigration">
+            <summary>
+            Run full migration: reset passwords and encrypt user data
+            WARNING: This will reset ALL user passwords!
+            </summary>
+        </member>
+        <member name="M:Backend_ORM.API.Controllers.MigrationController.DecryptAllUserData">
+            <summary>
+            Decrypt all user data (for rollback purposes)
+            WARNING: This will remove encryption from user data!
+            </summary>
         </member>
         <member name="T:Backend_ORM.API.Controllers.ProcessController">
             <summary>

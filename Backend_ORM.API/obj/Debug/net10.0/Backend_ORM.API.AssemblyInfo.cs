@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Backend_ORM.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5e7c4f0538312acce32d56bdb6d78e08adf61c8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dacbb1f8cb7a56d99a36a06aa36e2d41fb85688")]
 [assembly: System.Reflection.AssemblyProductAttribute("Backend_ORM.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Backend_ORM.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

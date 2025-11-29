@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj": {}
+    "D:\\ORM\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj": {
+    "D:\\ORM\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj",
+        "projectUniqueName": "D:\\ORM\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj",
         "projectName": "Backend_ORM.API",
-        "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj",
-        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.API\\obj\\",
+        "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.API\\Backend_ORM.API.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,14 +32,14 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
-                "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj"
+              "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
+                "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj"
               },
-              "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj"
+              "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj": {
+                "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj"
               },
-              "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj": {
-                "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj"
+              "D:\\ORM\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj": {
+                "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj"
               }
             }
           }
@@ -60,6 +60,10 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.0, )"
@@ -512,20 +516,20 @@
         }
       }
     },
-    "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
+    "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj",
+        "projectUniqueName": "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj",
         "projectName": "Backend_ORM.Core",
-        "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj",
-        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\obj\\",
+        "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -557,6 +561,24 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -851,20 +873,20 @@
         }
       }
     },
-    "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj": {
+    "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj",
+        "projectUniqueName": "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj",
         "projectName": "Backend_ORM.Infrastructure",
-        "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\obj\\",
+        "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -879,8 +901,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
-                "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj"
+              "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
+                "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj"
               }
             }
           }
@@ -1216,20 +1238,20 @@
         }
       }
     },
-    "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj": {
+    "D:\\ORM\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj",
+        "projectUniqueName": "D:\\ORM\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj",
         "projectName": "Backend_ORM.Services",
-        "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj",
-        "packagesPath": "C:\\Users\\ThinkPad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Services\\obj\\",
+        "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Services\\Backend_ORM.Services.csproj",
+        "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
+        "outputPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ThinkPad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1244,11 +1266,11 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
-                "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj"
+              "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj": {
+                "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Core\\Backend_ORM.Core.csproj"
               },
-              "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\ThinkPad\\source\\repos\\Mustafa-kl5\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj"
+              "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj": {
+                "projectPath": "D:\\ORM\\Backend_ORM\\Backend_ORM.Infrastructure\\Backend_ORM.Infrastructure.csproj"
               }
             }
           }
@@ -1268,6 +1290,20 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[8.3.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
