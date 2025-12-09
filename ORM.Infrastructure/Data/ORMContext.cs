@@ -18,6 +18,8 @@ public partial class ORMContext : DbContext
 
     public virtual DbSet<AbcExtract> AbcExtracts { get; set; }
 
+    public virtual DbSet<ActivityLog> ActivityLogs { get; set; }
+
     public virtual DbSet<AggregatedCounter> AggregatedCounters { get; set; }
 
     public virtual DbSet<AiCombination> AiCombinations { get; set; }
@@ -856,6 +858,10 @@ public partial class ORMContext : DbContext
 
     public virtual DbSet<Set> Sets { get; set; }
 
+    public virtual DbSet<SourceModule> SourceModules { get; set; }
+
+    public virtual DbSet<SourceSystem> SourceSystems { get; set; }
+
     public virtual DbSet<State> States { get; set; }
 
     public virtual DbSet<Status> Statuses { get; set; }
@@ -903,8 +909,14 @@ public partial class ORMContext : DbContext
     public virtual DbSet<WblowerReportClass> WblowerReportClasses { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        // Only configure SQL Server if no provider is already configured (allows InMemory for tests)
+        if (!optionsBuilder.IsConfigured)
+        {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=MUSTAFA\\MUSTAFA2019SERVE;Database=GRC_SLC_ORM;Trusted_Connection=True;TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("Server=MUSTAFA\\MUSTAFA2019SERVE;Database=GRC_SLC_ORM;Trusted_Connection=True;TrustServerCertificate=True;");
+        }
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -927,6 +939,71 @@ public partial class ORMContext : DbContext
                 .HasForeignKey(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_AbcExtract_GRC_Accounts");
+        });
+
+        modelBuilder.Entity<ActivityLog>(entity =>
+        {
+            entity.ToTable("ActivityLog", "AuditLogging");
+
+            entity.HasIndex(e => new { e.TenantId, e.EventType, e.TimestampUtc }, "IX_ActivityLog_Tenant_EventType_TimestampUTC");
+
+            entity.HasIndex(e => new { e.TenantId, e.TargetObject, e.TargetObjectId }, "IX_ActivityLog_Tenant_TargetObject_TargetObjectId");
+
+            entity.HasIndex(e => new { e.TenantId, e.UserId, e.TimestampUtc }, "IX_ActivityLog_Tenant_UserId_TimestampUTC");
+
+            entity.Property(e => e.ActionType)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+            entity.Property(e => e.CorrelationId).HasDefaultValueSql("(newid())", "DF_ActivityLog_CorrelationId");
+            entity.Property(e => e.DeviceInfo)
+                .HasMaxLength(300)
+                .IsUnicode(false);
+            entity.Property(e => e.Environment)
+                .HasMaxLength(20)
+                .IsUnicode(false);
+            entity.Property(e => e.EventType)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.FailureReason)
+                .HasMaxLength(500)
+                .IsUnicode(false);
+            entity.Property(e => e.RequestId)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+            entity.Property(e => e.ServerName)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.SourceIp)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("SourceIP");
+            entity.Property(e => e.TargetObject)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+            entity.Property(e => e.TargetObjectId)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+            entity.Property(e => e.TenantId)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.TimestampUtc)
+                .HasPrecision(3)
+                .HasDefaultValueSql("(sysutcdatetime())", "DF_ActivityLog_TimestampUTC")
+                .HasColumnName("TimestampUTC");
+            entity.Property(e => e.UserId)
+                .HasMaxLength(100)
+                .IsUnicode(false);
+            entity.Property(e => e.UserName)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.SourceModule).WithMany(p => p.ActivityLogs)
+                .HasForeignKey(d => d.SourceModuleId)
+                .HasConstraintName("FK_ActivityLog_SourceModule");
+
+            entity.HasOne(d => d.SourceSystem).WithMany(p => p.ActivityLogs)
+                .HasForeignKey(d => d.SourceSystemId)
+                .HasConstraintName("FK_ActivityLog_SourceSystem");
         });
 
         modelBuilder.Entity<AggregatedCounter>(entity =>
@@ -11662,6 +11739,47 @@ public partial class ORMContext : DbContext
             entity.Property(e => e.Key).HasMaxLength(100);
             entity.Property(e => e.Value).HasMaxLength(256);
             entity.Property(e => e.ExpireAt).HasColumnType("datetime");
+        });
+
+        modelBuilder.Entity<SourceModule>(entity =>
+        {
+            entity.ToTable("SourceModule", "AuditLogging");
+
+            entity.HasIndex(e => new { e.SourceSystemId, e.ModuleCode }, "UQ_SourceModule_System_ModuleCode").IsUnique();
+
+            entity.Property(e => e.CreatedOn)
+                .HasPrecision(3)
+                .HasDefaultValueSql("(sysutcdatetime())", "DF_SourceModule_CreatedOn");
+            entity.Property(e => e.IsActive).HasDefaultValue(true, "DF_SourceModule_IsActive");
+            entity.Property(e => e.ModuleCode)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.ModuleName)
+                .HasMaxLength(200)
+                .IsUnicode(false);
+
+            entity.HasOne(d => d.SourceSystem).WithMany(p => p.SourceModules)
+                .HasForeignKey(d => d.SourceSystemId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_SourceModule_SourceSystem");
+        });
+
+        modelBuilder.Entity<SourceSystem>(entity =>
+        {
+            entity.ToTable("SourceSystem", "AuditLogging");
+
+            entity.HasIndex(e => e.SystemCode, "UQ_SourceSystem_SystemCode").IsUnique();
+
+            entity.Property(e => e.CreatedOn)
+                .HasPrecision(3)
+                .HasDefaultValueSql("(sysutcdatetime())", "DF_SourceSystem_CreatedOn");
+            entity.Property(e => e.IsActive).HasDefaultValue(true, "DF_SourceSystem_IsActive");
+            entity.Property(e => e.SystemCode)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.SystemName)
+                .HasMaxLength(200)
+                .IsUnicode(false);
         });
 
         modelBuilder.Entity<State>(entity =>

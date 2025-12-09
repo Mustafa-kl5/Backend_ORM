@@ -1,11 +1,15 @@
 D:\ORM\Backend_ORM\ORM.Core\bin\Debug\net10.0\ORM.Core.deps.json
 D:\ORM\Backend_ORM\ORM.Core\bin\Debug\net10.0\ORM.Core.dll
 D:\ORM\Backend_ORM\ORM.Core\bin\Debug\net10.0\ORM.Core.pdb
+D:\ORM\Backend_ORM\ORM.Core\bin\Debug\net10.0\ORM.Domain.dll
+D:\ORM\Backend_ORM\ORM.Core\bin\Debug\net10.0\ORM.Domain.pdb
+D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.csproj.AssemblyReference.cache
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.GeneratedMSBuildEditorConfig.editorconfig
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.AssemblyInfoInputs.cache
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.AssemblyInfo.cs
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.csproj.CoreCompileInputs.cache
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.sourcelink.json
+D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.csproj.Up2Date
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.dll
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\refint\ORM.Core.dll
 D:\ORM\Backend_ORM\ORM.Core\obj\Debug\net10.0\ORM.Core.pdb

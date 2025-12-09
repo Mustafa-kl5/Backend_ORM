@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net10.0": {}
+    "net10.0": {
+      "ORM.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ORM.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ORM.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "ORM.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ORM.Domain/ORM.Domain.csproj",
+      "msbuildProject": "../ORM.Domain/ORM.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net10.0": []
+    "net10.0": [
+      "ORM.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\LENOVO\\.nuget\\packages\\": {},
@@ -38,7 +57,11 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\ORM\\Backend_ORM\\ORM.Domain\\ORM.Domain.csproj": {
+              "projectPath": "D:\\ORM\\Backend_ORM\\ORM.Domain\\ORM.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

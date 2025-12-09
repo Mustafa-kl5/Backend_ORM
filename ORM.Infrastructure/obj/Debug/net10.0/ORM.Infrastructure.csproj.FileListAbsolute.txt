@@ -48,10 +48,12 @@ D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Infrastructure.deps.
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Infrastructure.runtimeconfig.json
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Infrastructure.dll
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Infrastructure.pdb
+D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Application.dll
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Core.dll
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Domain.dll
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Core.pdb
 D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Domain.pdb
+D:\ORM\Backend_ORM\ORM.Infrastructure\bin\Debug\net10.0\ORM.Application.pdb
 D:\ORM\Backend_ORM\ORM.Infrastructure\obj\Debug\net10.0\ORM.Infrastructure.csproj.AssemblyReference.cache
 D:\ORM\Backend_ORM\ORM.Infrastructure\obj\Debug\net10.0\ORM.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 D:\ORM\Backend_ORM\ORM.Infrastructure\obj\Debug\net10.0\ORM.Infrastructure.AssemblyInfoInputs.cache
